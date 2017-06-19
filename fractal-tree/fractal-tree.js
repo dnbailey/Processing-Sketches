@@ -6,20 +6,27 @@
 
 */
 
-let length = 100
-
 function setup () {
   createCanvas(700, 700)
 }
 
 function draw () {
+  // Set inital length and angle for branches
+  const length = 100
+  const angle = PI / 4
+
   background(51)
   translate(width / 2, height)
+  stroke(255)
 
-  branch(length)
+  branch(length, angle)
 }
 
-function branch (length) {
-  stroke(255)
+function branch (length, angle) {
   line(0, 0, 0, -length)
+  translate(0, -length)
+  if (length > 2) {
+    rotate(angle)
+    branch(length * .67, angle)
+  }
 }

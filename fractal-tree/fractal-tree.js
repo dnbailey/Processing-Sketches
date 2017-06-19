@@ -25,6 +25,8 @@ function draw () {
 }
 
 function branch (length, angle) {
+  const shrinkBy = 0.67 // Changes the length by this factor
+
   // Draw initial line
   line(0, 0, 0, -length)
   // Move the origin to the end of the branch
@@ -32,7 +34,13 @@ function branch (length, angle) {
 
   // Recusive loop to create branches
   if (length > 2) { // Prevent stack overload
+    push()
     rotate(angle)
-    branch(length * 0.67, angle)
+    branch(length * shrinkBy, angle)
+    pop()
+    push()
+    rotate(-angle)
+    branch(length * shrinkBy, angle)
+    pop()
   }
 }

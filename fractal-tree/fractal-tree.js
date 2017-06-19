@@ -9,10 +9,10 @@ let slider
 
 function setup () {
   let canvas = createCanvas(550, 485)
-  canvas.parent('canvas')
+  canvas.parent('fractal-tree')
 
   slider = createSlider(0, PI / 2, PI / 4, 0.01)
-  slider.parent('canvas')
+  slider.parent('fractal-tree')
 }
 
 function draw () {
@@ -20,7 +20,7 @@ function draw () {
   const length = 150
   const angle = slider.value()
 
-  background(51)
+  background(77, 171, 135)
 
   // Set the orign to be the bottom and centered
   translate(width / 2, height)

@@ -5,15 +5,18 @@
   https://www.youtube.com/watch?v=0jjeOYMjmDU
 
 */
+let slider
 
 function setup () {
   createCanvas(700, 700)
+
+  slider = createSlider(0, PI / 2, PI / 4, 0.01)
 }
 
 function draw () {
   // Set inital length and angle for branches
-  const length = 100
-  const angle = PI / 4
+  const length = 200
+  const angle = slider.value()
 
   background(51)
 

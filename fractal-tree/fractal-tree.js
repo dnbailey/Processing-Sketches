@@ -8,7 +8,8 @@
 let slider
 
 function setup () {
-  createCanvas(700, 700)
+  createElement('h1', 'Fractal Tree')
+  createCanvas(550, 485)
 
   slider = createSlider(0, PI / 2, PI / 4, 0.01)
   createP('Adjust the slider to change the angle of the branches.');
@@ -16,7 +17,7 @@ function setup () {
 
 function draw () {
   // Set inital length and angle for branches
-  const length = 200
+  const length = 150
   const angle = slider.value()
 
   background(51)

@@ -5,6 +5,8 @@
   https://www.youtube.com/watch?v=0jjeOYMjmDU
 
 */
+'use strict'
+
 let slider
 
 function setup () {

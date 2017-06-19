@@ -1,25 +1,21 @@
 // length of lines
-const length = 50
+const length = 10
 
 // angle of turn
-const angle = 60
+const angle = 25
 
 // n: 8
-let generations = 20
+let generations = 4
 
 // axiom: A
-const axiom = "A"
+const axiom = "F"
 let sentence = axiom
 
 // rules: (A → +B−A−B+), (B → −A+B+A−)
 const rules = [
   {
-    input: 'A',
-    result: '-A-B-'
-  },
-  {
-    input: 'B',
-    result: 'A'
+    input: 'F',
+    result: 'FF+[+F-F-F]-[-F+F+F]'
   }
 ]
 
@@ -49,7 +45,7 @@ function generate () {
 
 function turtle () {
   resetMatrix()
-  translate(width / 2, height / 2)
+  translate(width / 2, height)
   stroke(0)
   for (i = 0; i < sentence.length; i ++) {
     let current = sentence.charAt(i)

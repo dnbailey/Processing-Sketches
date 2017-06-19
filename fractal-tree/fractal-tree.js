@@ -8,10 +8,11 @@
 let slider
 
 function setup () {
-  createCanvas(550, 485)
+  let canvas = createCanvas(550, 485)
+  canvas.parent('canvas')
 
   slider = createSlider(0, PI / 2, PI / 4, 0.01)
-  createP('Adjust the slider to change the angle of the branches.');
+  slider.parent('canvas')
 }
 
 function draw () {
@@ -19,7 +20,7 @@ function draw () {
   const length = 150
   const angle = slider.value()
 
-  background(72, 137, 98)
+  background(51)
 
   // Set the orign to be the bottom and centered
   translate(width / 2, height)

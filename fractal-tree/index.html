@@ -3,26 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Fractal Tree</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
     <style media="screen">
       @import url('https://fonts.googleapis.com/css?family=Roboto');
-
       body {
-        background: rgb(72,137,98);
-        text-align: center;
         font-family: 'Roboto', sans-serif;
-        color: rgb(255,255,255);
       }
-      h1 {
-        font-size: 3em;
-        text-transform: uppercase;
+      .hero {
+        background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSJyZ2JhKDUxLDUxLDUxLDAuNykiPjwvcmVjdD4KPHBhdGggZD0iTTI4IDY2TDAgNTBMMCAxNkwyOCAwTDU2IDE2TDU2IDUwTDI4IDY2TDI4IDEwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2IoNjAsNjAsNjApIiBzdHJva2Utd2lkdGg9IjIiPjwvcGF0aD4KPHBhdGggZD0iTTI4IDBMMjggMzRMMCA1MEwwIDg0TDI4IDEwMEw1NiA4NEw1NiA1MEwyOCAzNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2IoNTUsNTUsNTUpIiBzdHJva2Utd2lkdGg9IjIiPjwvcGF0aD4KPC9zdmc+");
+        background-blend-mode: luminosity;
       }
-      a, a:hover, a:visited {
-        color: rgb(255,255,255);
+      .section {
+        padding: 1em;
       }
-      input {
+      input[type='range'] {
         display: block;
-        margin: 45px auto 0;
+        margin: 16px auto 0;
       }
     </style>
 
@@ -31,8 +27,20 @@
     <script src="fractal-tree.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>Fractal Tree</h1>
-    <p><a href="https://dnbailey.github.io/Processing-Sketches/">Return to P5.js Experiments</a></p>
+    <section class="hero bold is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-1">Fractal Tree</h1>
+          <h2 class="subtitle is-5"><a href="https://dnbailey.github.io/Processing-Sketches/">&laquo; Return to P5.js Experiments</a></h2>
+        </div>
+      </div>
 
+    </section>
+    <section id="canvas" class="section has-text-centered">
+
+    </section>
+    <section class="section has-text-centered">
+      <p>Adjust the slider to rotate the branches.</p>
+    </section>
   </body>
 </html>

@@ -11,6 +11,7 @@ function setup () {
   createCanvas(700, 700)
 
   slider = createSlider(0, PI / 2, PI / 4, 0.01)
+  createP('Adjust the slider to change the angle of the branches.');
 }
 
 function draw () {

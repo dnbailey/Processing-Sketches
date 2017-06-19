@@ -68,6 +68,12 @@ function turtle () {
 function setup () {
   createCanvas(800, 600)
   background(255)
+
+  let showRules
+  for (var i = 0; i < rules.length; i++) {
+    showRules = createP(rules[i].input + ' &rarr; ' + rules[i].result)
+  }
+  showRules.parent('rules')
 }
 
 function draw () {
